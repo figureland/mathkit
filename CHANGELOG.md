@@ -1,4 +1,16 @@
 
+## v0.0.8
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.7...v0.0.8)
+
+### 🚀 Enhancements
+
+- Removed typed array ([12de7e2](https://github.com/figureland/mathkit/commit/12de7e2))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.7
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.6...v0.0.7)
