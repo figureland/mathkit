@@ -23,11 +23,11 @@ export const set = (v: Vector2, x: number, y: number) => {
   return v
 }
 
-const vector2 = (v: Vector2 = [0, 0]): Vector2 => set(new Float32Array(2), v[0], v[1])
+const vector2 = (x: number = 0, y: number = 0): Vector2 => [x, y]
 
 export default vector2
 
-export const clone = (v: Vector2) => vector2(v)
+export const clone = (v: Vector2) => vector2(v[0], v[1])
 
 export const copy = (v: Vector2, a: Vector2) => set(v, a[0], a[1])
 

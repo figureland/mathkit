@@ -4,12 +4,18 @@ import { sin, cos, sqrt, abs, max } from './number'
 
 export type { Matrix2D } from './api'
 
-const matrix2D = (initial: Matrix2D = [1, 0, 0, 1, 0, 0]): Matrix2D =>
-  set(new Float32Array(6), initial[0], initial[1], initial[2], initial[3], initial[4], initial[5])
+const matrix2D = (
+  a: number = 1,
+  b: number = 0,
+  c: number = 0,
+  d: number = 1,
+  e: number = 0,
+  f: number = 0
+): Matrix2D => [a, b, c, d, e, f]
 
 export default matrix2D
 
-export const clone = (m: Matrix2D) => matrix2D([m[0], m[1], m[2], m[3], m[4], m[5]])
+export const clone = (m: Matrix2D) => matrix2D(m[0], m[1], m[2], m[3], m[4], m[5])
 
 const set = (m: Matrix2D, a: number, b: number, c: number, d: number, e: number, f: number) => {
   m[0] = a
