@@ -1,4 +1,16 @@
 
+## v0.0.6
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.5...v0.0.6)
+
+### ✅ Tests
+
+- Added tests for matrix2D and vector2 ([9e07150](https://github.com/figureland/mathkit/commit/9e07150))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.5
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.4...v0.0.5)
