@@ -15,7 +15,7 @@
       "require": "./dist/vector2.js",
       "import": "./dist/vector2.js"
     },
-    "./matrix2d": {
+    "./matrix2D": {
       "types": "./dist/matrix2D.d.ts",
       "require": "./dist/matrix2D.js",
       "import": "./dist/matrix2D.js"
