@@ -1,21 +1,32 @@
 {
-  "name": "@figureland/bun-typescript-template",
+  "name": "@figureland/mathkit",
   "version": "0.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
       "import": "./dist/index.js"
     },
-    "./entry": {
-      "types": "./dist/entry.d.ts",
-      "require": "./dist/entry.js",
-      "import": "./dist/entry.js"
+    "./vector2": {
+      "types": "./dist/vector2.d.ts",
+      "require": "./dist/vector2.js",
+      "import": "./dist/vector2.js"
+    },
+    "./matrix2d": {
+      "types": "./dist/matrix2D.d.ts",
+      "require": "./dist/matrix2D.js",
+      "import": "./dist/matrix2D.js"
+    },
+    "./style": {
+      "types": "./dist/style.d.ts",
+      "require": "./dist/style.js",
+      "import": "./dist/style.js"
     }
   },
-  "description": "",
+  "description": "A minimal toolkit for working with numbers, matrices and vectors",
   "scripts": {
     "build": "bun run build.ts",
     "prepublishOnly": "bun run build",
