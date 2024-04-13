@@ -1,4 +1,15 @@
 
+## v0.0.2
+
+
+### 🚀 Enhancements
+
+- Added number, vector and matrix2d utilities ([57947cb](https://github.com/figureland/bun-typescript-template/commit/57947cb))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.1
 
 
