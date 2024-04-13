@@ -32,28 +32,18 @@ export const copy = (m: Matrix2D, a: Matrix2D) => set(m, a[0], a[1], a[2], a[3],
  * Inverts a {@link Matrix2D}
  */
 
-export const invert = (m: Matrix2D, source: Matrix2D) => {
-  let aa = source[0],
-    ab = source[1],
-    ac = source[2],
-    ad = source[3]
-  let atx = source[4],
-    aty = source[5]
-
-  let det = aa * ad - ab * ac
-  if (!det) {
-    return m
-  }
+export const invert = (m: Matrix2D, a: Matrix2D) => {
+  let det = determinant(a)
   det = 1.0 / det
 
   return set(
     m,
-    ad * det,
-    -ab * det,
-    -ac * det,
-    aa * det,
-    (ac * aty - ad * atx) * det,
-    (ab * atx - aa * aty) * det
+    a[3] * det,
+    -a[1] * det,
+    -a[2] * det,
+    a[0] * det,
+    (a[2] * a[5] - a[3] * a[4]) * det,
+    (a[1] * a[4] - a[0] * a[5]) * det
   )
 }
 
@@ -80,15 +70,15 @@ export const multiply = (m: Matrix2D, a: Matrix2D, b: Matrix2D) =>
  * Rotates a {@link Matrix2D} by the given angle
  */
 export const rotate = (m: Matrix2D, a: Matrix2D, rad: number) => {
-  let s = sin(rad)
-  let c = cos(rad)
+  const s = sin(rad)
+  const c = cos(rad)
   return set(
     m,
     a[0] * c + a[2] * s,
     a[1] * c + a[3] * s,
     a[0] * -s + a[2] * c,
-    a[4],
     a[1] * -s + a[3] * c,
+    a[4],
     a[5]
   )
 }
@@ -102,8 +92,8 @@ export const translate = (m: Matrix2D, a: Matrix2D, v: Vector2 | [number, number
   set(m, a[0], a[1], a[2], a[3], a[0] * v[0] + a[2] * v[1] + a[4], a[1] * v[0] + a[3] * v[1] + a[5])
 
 export const fromRotation = (m: Matrix2D, rad: number) => {
-  let s = sin(rad),
-    c = cos(rad)
+  const s = sin(rad)
+  const c = cos(rad)
 
   return set(m, c, s, -s, c, 0, 0)
 }

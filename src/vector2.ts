@@ -7,7 +7,9 @@ import {
   lerp as _lerp,
   sqrt,
   abs,
-  acos
+  acos,
+  sin,
+  cos
 } from './number'
 import type { Matrix2D, Vector2 } from './api'
 
@@ -21,12 +23,11 @@ export const set = (v: Vector2, x: number, y: number) => {
   return v
 }
 
-const vector2 = (initial: Vector2 = [0, 0]): Vector2 =>
-  set(new Float32Array(2), initial[0], initial[1])
+const vector2 = (v: Vector2 = [0, 0]): Vector2 => set(new Float32Array(2), v[0], v[1])
 
 export default vector2
 
-export const clone = (v: Vector2) => vector2([v[0], v[1]])
+export const clone = (v: Vector2) => vector2(v)
 
 export const copy = (v: Vector2, a: Vector2) => set(v, a[0], a[1])
 
@@ -58,39 +59,29 @@ export const scaleAndAdd = (v: Vector2, a: Vector2, b: Vector2, scale: number) =
   set(v, a[0] + b[0] * scale, a[1] + b[1] * scale)
 
 export const distance = (a: Vector2, b: Vector2) => {
-  const x = b[0] - a[0],
-    y = b[1] - a[1]
+  const x = b[0] - a[0]
+  const y = b[1] - a[1]
   return sqrt(x * x + y * y)
 }
 
 export const squaredDistance = (a: Vector2, b: Vector2) => {
-  const x = b[0] - a[0],
-    y = b[1] - a[1]
+  const x = b[0] - a[0]
+  const y = b[1] - a[1]
   return x * x + y * y
 }
 
-export const length = (a: Vector2) => {
-  const x = a[0],
-    y = a[1]
-  return sqrt(x * x + y * y)
-}
+export const length = (a: Vector2) => sqrt(a[0] * a[0] + a[1] * a[1])
 
-export const squaredLength = (a: Vector2) => {
-  const x = a[0],
-    y = a[1]
-  return x * x + y * y
-}
+export const squaredLength = (a: Vector2) => a[0] * a[0] + a[1] * a[1]
 
 export const negate = (v: Vector2, a: Vector2) => set(v, -a[0], -a[1])
 
 export const inverse = (v: Vector2, a: Vector2) => set(v, 1.0 / a[0], 1.0 / a[1])
 
 export const normalize = (v: Vector2, a: Vector2) => {
-  const x = a[0],
-    y = a[1]
-  let len = x * x + y * y
+  let len = a[0] * a[0] + a[1] * a[1]
   if (len > 0) {
-    len = 1 / Math.sqrt(len)
+    len = 1 / sqrt(len)
   }
 
   return set(v, a[0] * len, a[1] * len)
@@ -101,37 +92,25 @@ export const dot = (a: Vector2, b: Vector2) => a[0] * b[0] + a[1] * b[1]
 export const lerp = (v: Vector2, a: Vector2, b: Vector2, amount: number) =>
   set(v, _lerp(a[0], b[0], amount), _lerp(a[1], b[1], amount))
 
-export const transformMatrix2D = (v: Vector2, a: Vector2 | [number, number], m: Matrix2D) =>
+export const transformMatrix2D = (v: Vector2, a: Vector2, m: Matrix2D) =>
   set(v, m[0] * a[0] + m[2] * a[1] + m[4], m[1] * a[0] + m[3] * a[1] + m[5])
 
 export const rotate = (v: Vector2, a: Vector2, b: Vector2, rad: number) => {
-  const p0 = a[0] - b[0],
-    p1 = a[1] - b[1],
-    sinC = Math.sin(rad),
-    cosC = Math.cos(rad)
-
-  return set(v, p0 * cosC - p1 * sinC + b[0], p0 * sinC + p1 * cosC + b[1])
+  const p0 = a[0] - b[0]
+  const p1 = a[1] - b[1]
+  const s = sin(rad)
+  const c = cos(rad)
+  return set(v, p0 * c - p1 * s + b[0], p0 * s + p1 * c + b[1])
 }
 
 export const angle = (a: Vector2, b: Vector2) => {
-  const x1 = a[0],
-    y1 = a[1],
-    x2 = b[0],
-    y2 = b[1],
-    mag = sqrt((x1 * x1 + y1 * y1) * (x2 * x2 + y2 * y2)),
-    cosine = mag && (x1 * x2 + y1 * y2) / mag
-  return acos(_min(_max(cosine, -1), 1))
+  const m = sqrt((a[0] * a[0] + a[1] * a[1]) * (b[0] * b[0] + b[1] * b[1]))
+  const c = m && (a[0] * b[0] + a[1] * b[1]) / m
+  return acos(_min(_max(c, -1), 1))
 }
 
 export const exactEquals = (a: Vector2, b: Vector2) => a[0] === b[0] && a[1] === b[1]
 
-export const equals = (a: Vector2, b: Vector2) => {
-  const a0 = a[0],
-    a1 = a[1]
-  const b0 = b[0],
-    b1 = b[1]
-  return (
-    Math.abs(a0 - b0) <= EPS * _max(1.0, abs(a0), abs(b0)) &&
-    Math.abs(a1 - b1) <= EPS * _max(1.0, abs(a1), abs(b1))
-  )
-}
+export const equals = (a: Vector2, b: Vector2) =>
+  abs(a[0] - b[0]) <= EPS * _max(1.0, abs(a[0]), abs(b[0])) &&
+  abs(a[1] - b[1]) <= EPS * _max(1.0, abs(a[1]), abs(b[1]))

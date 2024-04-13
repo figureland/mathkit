@@ -33,7 +33,8 @@
     "prepare": "husky",
     "lint": "eslint src/",
     "format": "prettier --write src/",
-    "release": "bunx changelogen@latest --release"
+    "release": "bunx changelogen@latest --release",
+    "test:watch": "bun test --watch"
   },
   "files": [
     "dist"
