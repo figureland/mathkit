@@ -8,44 +8,43 @@ import vector2, {
   dot,
   clone,
   reset,
-  equals,
-  type Vector2
+  equals
 } from '../src/vector2'
 
 describe('Vector2 operations', () => {
   test('create Matrix2', () => {
-    expect(vector2()).toEqual([0, 0])
+    expect(vector2()).toEqual({ x: 0, y: 0 })
   })
 
   test('create Matrix2 with arguments', () => {
-    expect(vector2(1, 2)).toEqual([1, 2])
+    expect(vector2(1, 2)).toEqual({ x: 1, y: 2 })
   })
 
   test('creates Matrix2 as a new instance', () => {
-    const arrV = [1, 2] as Vector2
-    const v = vector2(...arrV)
-    expect(arrV).not.toBe(v)
+    const v1 = { x: 1, y: 2 }
+    const v = vector2(v1.x, v1.y)
+    expect(v1).not.toBe(v)
   })
 
   test('add two vectors', () => {
     const v1 = vector2(1, 2)
     const v2 = vector2(3, 4)
     const result = add(vector2(), v1, v2)
-    expect(result).toEqual([4, 6])
+    expect(result).toEqual({ x: 4, y: 6 })
   })
 
   test('subtract two vectors', () => {
     const v1 = vector2(5, 6)
     const v2 = vector2(2, 4)
     const result = subtract(vector2(), v1, v2)
-    expect(result).toEqual([3, 2])
+    expect(result).toEqual({ x: 3, y: 2 })
   })
 
   test('multiply two vectors', () => {
     const v1 = vector2(1, 2)
     const v2 = vector2(3, 4)
     const result = multiply(vector2(), v1, v2)
-    expect(result).toEqual([3, 8])
+    expect(result).toEqual({ x: 3, y: 8 })
   })
 
   test('length of a vector', () => {
@@ -57,7 +56,7 @@ describe('Vector2 operations', () => {
   test('normalize a vector', () => {
     const v = vector2(4, 0)
     const result = normalize(vector2(), v)
-    expect(result).toEqual([1, 0]) // Normalized vector of [4, 0] is [1, 0]
+    expect(result).toEqual({ x: 1, y: 0 }) // Normalized vector of [4, 0] is [1, 0]
   })
 
   test('dot product of two vectors', () => {
@@ -70,14 +69,14 @@ describe('Vector2 operations', () => {
   test('clone a vector', () => {
     const v = vector2(7, 9)
     const result = clone(v)
-    expect(result).toEqual([7, 9])
+    expect(result).toEqual({ x: 7, y: 9 })
     expect(result).not.toBe(v)
   })
 
   test('reset a vector', () => {
     const v = vector2(10, 15)
     const result = reset(v)
-    expect(result).toEqual([0, 0])
+    expect(result).toEqual({ x: 0, y: 0 })
   })
 
   test('equality check with epsilon', () => {
@@ -97,7 +96,7 @@ describe('Vector2 operations', () => {
     const expectedLength = 1
     const resultantLength = length(normalizedV)
     expect(resultantLength).toBeCloseTo(expectedLength)
-    expect(normalizedV[0]).toBeCloseTo(0.6, 10)
-    expect(normalizedV[1]).toBeCloseTo(0.8, 10)
+    expect(normalizedV.x).toBeCloseTo(0.6, 10)
+    expect(normalizedV.y).toBeCloseTo(0.8, 10)
   })
 })

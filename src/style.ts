@@ -5,4 +5,4 @@ export const transform = (matrix: Matrix2D) =>
 
 export const scale = (s: number) => transform([s, 0, 0, s, 0, 0])
 
-export const translate = ([x, y]: Vector2) => transform([1, 0, 0, 1, x, y])
+export const translate = (v: Vector2) => transform([1, 0, 0, 1, v.x, v.y])

@@ -17,6 +17,7 @@ import matrix2D, {
   multiplyScalar,
   equals
 } from '../src/matrix2D'
+import vector2 from '../src/vector2'
 
 describe('Matrix2D operations', () => {
   test('create default Matrix2D', () => {
@@ -72,13 +73,13 @@ describe('Matrix2D operations', () => {
 
   test('scale matrix', () => {
     const m = matrix2D()
-    const scaled = scale(matrix2D(), m, [2, 3])
+    const scaled = scale(matrix2D(), m, vector2(2, 3))
     expect(scaled).toEqual([2, 0, 0, 3, 0, 0])
   })
 
   test('translate matrix', () => {
     const m = matrix2D()
-    const translated = translate(matrix2D(), m, [1, 2])
+    const translated = translate(matrix2D(), m, vector2(1, 2))
     expect(translated).toEqual([1, 0, 0, 1, 1, 2])
   })
 
@@ -92,12 +93,12 @@ describe('Matrix2D operations', () => {
   })
 
   test('from scaling matrix', () => {
-    const m = fromScaling(matrix2D(), [2, 3])
+    const m = fromScaling(matrix2D(), vector2(2, 3))
     expect(m).toEqual([2, 0, 0, 3, 0, 0])
   })
 
   test('from translation matrix', () => {
-    const m = fromTranslation(matrix2D(), [1, 2])
+    const m = fromTranslation(matrix2D(), vector2(1, 2))
     expect(m).toEqual([1, 0, 0, 1, 1, 2])
   })
 

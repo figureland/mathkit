@@ -1,6 +1,6 @@
 import type { Matrix2D, Vector2 } from './api'
 import { EPS } from './constants'
-import { sin, cos, sqrt, abs, max } from './number'
+import { sin, cos, sqrt, abs, max, isNumber } from './number'
 
 export type { Matrix2D } from './api'
 
@@ -26,6 +26,9 @@ const set = (m: Matrix2D, a: number, b: number, c: number, d: number, e: number,
   m[5] = f
   return m
 }
+
+export const isMatrix2D = (m: any): m is Matrix2D =>
+  m != null && m.length === 6 && m.every(isNumber)
 
 export const identity = (m: Matrix2D) => set(m, 1, 0, 0, 1, 0, 0)
 
@@ -89,13 +92,13 @@ export const rotate = (m: Matrix2D, a: Matrix2D, rad: number) => {
   )
 }
 
-export const scale = (m: Matrix2D, a: Matrix2D, v: Vector2 | [number, number]) =>
-  set(m, a[0] * v[0], a[1] * v[0], a[2] * v[1], a[3] * v[1], a[4], a[5])
+export const scale = (m: Matrix2D, a: Matrix2D, v: Vector2) =>
+  set(m, a[0] * v.x, a[1] * v.x, a[2] * v.y, a[3] * v.y, a[4], a[5])
 
 export const getScale = (m: Matrix2D) => sqrt(m[0] * m[3])
 
-export const translate = (m: Matrix2D, a: Matrix2D, v: Vector2 | [number, number]) =>
-  set(m, a[0], a[1], a[2], a[3], a[0] * v[0] + a[2] * v[1] + a[4], a[1] * v[0] + a[3] * v[1] + a[5])
+export const translate = (m: Matrix2D, a: Matrix2D, v: Vector2) =>
+  set(m, a[0], a[1], a[2], a[3], a[0] * v.x + a[2] * v.y + a[4], a[1] * v.x + a[3] * v.y + a[5])
 
 export const fromRotation = (m: Matrix2D, rad: number) => {
   const s = sin(rad)
@@ -103,10 +106,9 @@ export const fromRotation = (m: Matrix2D, rad: number) => {
 
   return set(m, c, s, -s, c, 0, 0)
 }
-export const fromScaling = (m: Matrix2D, v: Vector2) => set(m, v[0], 0, 0, v[1], 0, 0)
+export const fromScaling = (m: Matrix2D, v: Vector2) => set(m, v.x, 0, 0, v.y, 0, 0)
 
-export const fromTranslation = (m: Matrix2D, v: Vector2 | [number, number]) =>
-  set(m, 1, 0, 0, 1, v[0], v[1])
+export const fromTranslation = (m: Matrix2D, v: Vector2) => set(m, 1, 0, 0, 1, v.x, v.y)
 
 export const add = (m: Matrix2D, a: Matrix2D, b: Matrix2D) =>
   set(m, a[0] + b[0], a[1] + b[1], a[2] + b[2], a[3] + b[3], a[4] + b[4], a[5] + b[5])

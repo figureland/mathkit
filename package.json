@@ -20,6 +20,11 @@
       "require": "./dist/matrix2D.js",
       "import": "./dist/matrix2D.js"
     },
+    "./box": {
+      "types": "./dist/box.d.ts",
+      "require": "./dist/box.js",
+      "import": "./dist/box.js"
+    },
     "./style": {
       "types": "./dist/style.d.ts",
       "require": "./dist/style.js",
@@ -28,7 +33,7 @@
   },
   "description": "A minimal toolkit for working with numbers, matrices and vectors",
   "scripts": {
-    "build": "bun run build.ts",
+    "build": "bun run scripts/build.ts",
     "prepublishOnly": "bun run build",
     "prepare": "husky",
     "lint": "eslint src/",
