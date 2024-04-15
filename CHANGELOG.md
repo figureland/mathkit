@@ -1,4 +1,16 @@
 
+## v0.0.12
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.11...v0.0.12)
+
+### 🚀 Enhancements
+
+- Added elementToBox ([753d137](https://github.com/figureland/mathkit/commit/753d137))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.11
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.10...v0.0.11)
