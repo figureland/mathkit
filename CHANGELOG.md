@@ -1,4 +1,16 @@
 
+## v0.0.11
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.10...v0.0.11)
+
+### 🚀 Enhancements
+
+- Added size ([84304d2](https://github.com/figureland/mathkit/commit/84304d2))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.10
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.9...v0.0.10)
