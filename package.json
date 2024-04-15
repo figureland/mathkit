@@ -25,6 +25,11 @@
       "require": "./dist/box.js",
       "import": "./dist/box.js"
     },
+    "./size": {
+      "types": "./dist/size.d.ts",
+      "require": "./dist/size.js",
+      "import": "./dist/size.js"
+    },
     "./style": {
       "types": "./dist/style.d.ts",
       "require": "./dist/style.js",

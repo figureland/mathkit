@@ -6,7 +6,8 @@ await Bun.build({
     './src/style.ts',
     './src/vector2.ts',
     './src/matrix2D.ts',
-    './src/box.ts'
+    './src/box.ts',
+    './src/size.ts'
   ],
   outdir: './dist',
   minify: false,
