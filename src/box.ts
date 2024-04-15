@@ -1,6 +1,7 @@
 import type { Box, Matrix2D, Vector2 } from './api'
+import matrix2D, { translate as translateMat2D, rotate as rotateMat2D } from './matrix2D'
 import { max, min } from './number'
-import vector2, { isVector2 } from './vector2'
+import vector2, { isVector2, negate } from './vector2'
 
 export type { Box } from './api'
 
@@ -181,3 +182,16 @@ export const transformBox = (b: Box, matrix: Matrix2D): Box => {
 
   return box(minX, minY, maxX - minX, maxY - minY)
 }
+
+/**
+ * A helper function that rotates a box around its center.
+ */
+export const rotate = (box: Box, angle: number) => {
+  const center = boxCenter(box)
+  let matrix = translateMat2D(matrix2D(), matrix2D(), center)
+  matrix = rotateMat2D(matrix, matrix, angle)
+  translateMat2D(matrix, matrix, negate(center, center))
+  return transformBox(box, matrix)
+}
+
+export const boxCenter = (box: Box) => vector2(box.x + box.width / 2, box.y + box.height / 2)

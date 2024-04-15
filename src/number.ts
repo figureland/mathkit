@@ -1,3 +1,5 @@
+import { PI } from './constants'
+
 export const { min, max, abs, sign, round, sqrt, sin, cos, ceil, floor, acos, tan } = Math
 
 export const log = (n: number, a?: number) => Math.log(n) / (a ? Math.log(a) : 1)
@@ -48,3 +50,7 @@ export const lerp = (from: number, to: number, amount: number): number =>
 export const dp = (n: any, dp: number): number => Number(n.toFixed(dp))
 
 export const isNumber = (n: any): n is number => typeof n === 'number'
+
+export const radToDegrees = (radians: number) => (radians * 180) / PI
+
+export const degreesToRad = (degrees: number) => (degrees * PI) / 180

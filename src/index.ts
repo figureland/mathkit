@@ -15,5 +15,7 @@ export {
   floor,
   tan,
   acos,
-  log
+  log,
+  degreesToRad,
+  radToDegrees
 } from './number'
