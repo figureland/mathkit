@@ -91,7 +91,7 @@ export const includeBox = (v: Box, b: Box) => {
 
 /**
  * Determines if a box intersects with another box or a point, optionally considering padding.
- * @param a - The first box.
+ * @param a - The first box
  * @param b - The second entity, which could be another box or a point.
  * @param padding - Optional padding to extend the boundaries of the first box.
  * @returns True if they intersect, false otherwise.

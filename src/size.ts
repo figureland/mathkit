@@ -40,3 +40,15 @@ export const copy = (s: Size, a: Size) => set(s, a.width, a.height)
 export const reset = (s: Size) => set(s, 0, 0)
 
 export const resize = (v: Size, width: number, height: number) => set(v, width, height)
+
+export const equals = (a: Size, b: Size) => a.width === b.width && a.height === b.height
+
+export const add = (s: Size, a: Size) => set(s, s.width + a.width, s.height + a.height)
+
+export const scale = (s: Size, n: number) => set(s, s.width * n, s.height * n)
+
+export const subtract = (s: Size, a: Size) => set(s, s.width - a.width, s.height - a.height)
+
+export const multiply = (s: Size, a: Size) => set(s, s.width * a.width, s.height * a.height)
+
+export const divide = (s: Size, a: Size) => set(s, s.width / a.width, s.height / a.height)
