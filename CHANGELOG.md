@@ -1,4 +1,16 @@
 
+## v0.0.13
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.12...v0.0.13)
+
+### 🚀 Enhancements
+
+- New helper functions for box, size and style ([edc1ead](https://github.com/figureland/mathkit/commit/edc1ead))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.12
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.11...v0.0.12)
