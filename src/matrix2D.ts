@@ -1,7 +1,6 @@
 import type { Matrix2D, Vector2 } from './api'
 import { EPS } from './constants'
-import { sin, cos, sqrt, abs, max, isNumber } from '@figureland/mathkit'
-
+import { sin, cos, sqrt, abs, max, isNumber, lerp as _lerp } from '@figureland/mathkit'
 export type { Matrix2D } from './api'
 
 const matrix2D = (
@@ -126,3 +125,14 @@ export const equals = (m: Matrix2D, a: Matrix2D) =>
   abs(m[3] - a[3]) <= EPS * max(1.0, abs(m[3]), abs(a[3])) &&
   abs(m[4] - a[4]) <= EPS * max(1.0, abs(m[4]), abs(a[4])) &&
   abs(m[5] - a[5]) <= EPS * max(1.0, abs(m[5]), abs(a[5]))
+
+export const lerp = (m: Matrix2D, a: Matrix2D, b: Matrix2D, t: number) =>
+  set(
+    m,
+    _lerp(a[0], b[0], t),
+    _lerp(a[1], b[1], t),
+    _lerp(a[2], b[2], t),
+    _lerp(a[3], b[3], t),
+    _lerp(a[4], b[4], t),
+    _lerp(a[5], b[5], t)
+  )
