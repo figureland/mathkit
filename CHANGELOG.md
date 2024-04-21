@@ -1,4 +1,16 @@
 
+## v0.0.14
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.13...v0.0.14)
+
+### 🚀 Enhancements
+
+- Added easings ([ee77b08](https://github.com/figureland/mathkit/commit/ee77b08))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.13
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.12...v0.0.13)
