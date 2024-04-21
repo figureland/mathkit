@@ -1,5 +1,5 @@
 import { PI } from './constants'
-import { cos, pow, sin, sqrt } from './number'
+import { cos, pow, sin, sqrt } from '@figureland/mathkit'
 
 export type Easing = (x: number) => number
 

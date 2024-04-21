@@ -18,5 +18,6 @@ export {
   log,
   degreesToRad,
   radToDegrees,
-  pow
+  pow,
+  isNumber
 } from './number'

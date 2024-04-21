@@ -11,6 +11,11 @@
     "allowJs": true,
     "noEmit": true,
     "outDir": "dist",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@figureland/mathkit": ["./src/index.ts"],
+      "@figureland/mathkit/*": ["./src/*.ts"]
+    }
   }
 }

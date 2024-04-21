@@ -10,7 +10,7 @@ import {
   acos,
   sin,
   cos
-} from './number'
+} from '@figureland/mathkit'
 
 import type { Matrix2D, Vector2 } from './api'
 

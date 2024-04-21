@@ -1,6 +1,6 @@
 import type { Matrix2D, Vector2 } from './api'
 import { EPS } from './constants'
-import { sin, cos, sqrt, abs, max, isNumber } from './number'
+import { sin, cos, sqrt, abs, max, isNumber } from '@figureland/mathkit'
 
 export type { Matrix2D } from './api'
 
