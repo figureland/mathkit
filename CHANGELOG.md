@@ -1,4 +1,16 @@
 
+## v0.0.15
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.14...v0.0.15)
+
+### 🚀 Enhancements
+
+- Reduced entrypoint build sizes by updating imports ([de8fa03](https://github.com/figureland/mathkit/commit/de8fa03))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.14
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.13...v0.0.14)
