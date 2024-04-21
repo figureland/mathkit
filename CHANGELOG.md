@@ -1,4 +1,16 @@
 
+## v0.0.16
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.15...v0.0.16)
+
+### 🚀 Enhancements
+
+- Added lerp for matrix2d ([35cb5ca](https://github.com/figureland/mathkit/commit/35cb5ca))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.15
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.14...v0.0.15)
