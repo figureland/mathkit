@@ -10,6 +10,16 @@
       "require": "./dist/index.js",
       "import": "./dist/index.js"
     },
+    "./number": {
+      "types": "./dist/number.d.ts",
+      "require": "./dist/number.js",
+      "import": "./dist/number.js"
+    },
+    "./easing": {
+      "types": "./dist/easing.d.ts",
+      "require": "./dist/easing.js",
+      "import": "./dist/easing.js"
+    },
     "./vector2": {
       "types": "./dist/vector2.d.ts",
       "require": "./dist/vector2.js",

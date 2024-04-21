@@ -17,5 +17,6 @@ export {
   acos,
   log,
   degreesToRad,
-  radToDegrees
+  radToDegrees,
+  pow
 } from './number'
