@@ -1,4 +1,16 @@
 
+## v0.0.17
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.16...v0.0.17)
+
+### 🏡 Chore
+
+- Moved type exports to api ([101331a](https://github.com/figureland/mathkit/commit/101331a))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.16
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.15...v0.0.16)
