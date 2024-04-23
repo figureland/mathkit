@@ -11,3 +11,5 @@ export type Size = {
 export type Box = Vector2 & Size
 
 export type Matrix2D = [number, number, number, number, number, number]
+
+export type Easing = (x: number) => number

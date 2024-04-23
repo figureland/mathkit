@@ -1,7 +1,8 @@
+import type { Easing } from './api'
 import { PI } from './constants'
 import { cos, pow, sin, sqrt } from '@figureland/mathkit'
 
-export type Easing = (x: number) => number
+export type { Easing } from './api'
 
 export const linear: Easing = (x: number) => x
 
