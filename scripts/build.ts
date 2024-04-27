@@ -13,6 +13,5 @@ await Bun.build({
   ],
   outdir: './dist',
   minify: false,
-  plugins: [dts()],
-  external: ['@figureland/mathkit']
+  plugins: [dts()]
 })

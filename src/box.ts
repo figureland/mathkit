@@ -1,11 +1,7 @@
 import type { Box, Matrix2D, Vector2 } from './api'
-import {
-  matrix2D,
-  translate as translateMat2D,
-  rotate as rotateMat2D
-} from '@figureland/mathkit/matrix2D'
-import { max, min } from '@figureland/mathkit/number'
-import { vector2, isVector2, negate } from '@figureland/mathkit/vector2'
+import { matrix2D, translate as translateMat2D, rotate as rotateMat2D } from './matrix2D'
+import { max, min } from './number'
+import { vector2, isVector2, negate } from './vector2'
 
 export type { Box } from './api'
 

@@ -1,6 +1,6 @@
 import type { Easing } from './api'
 import { PI } from './constants'
-import { cos, pow, sin, sqrt } from '@figureland/mathkit'
+import { cos, pow, sin, sqrt } from './number'
 
 export type { Easing } from './api'
 
