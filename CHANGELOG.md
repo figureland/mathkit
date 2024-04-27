@@ -1,4 +1,16 @@
 
+## v0.0.18
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.17...v0.0.18)
+
+### 🚀 Enhancements
+
+- Switched to more logical export convention ([60b6172](https://github.com/figureland/mathkit/commit/60b6172))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.17
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.16...v0.0.17)
