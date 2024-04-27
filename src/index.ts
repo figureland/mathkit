@@ -21,3 +21,7 @@ export {
   pow,
   isNumber
 } from './number'
+
+export type { Vector2 } from './vector2'
+export type { Matrix2D } from './matrix2D'
+export * from './api'
