@@ -1,4 +1,17 @@
 
+## v0.0.20
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.19...v0.0.20)
+
+### 🏡 Chore
+
+- Trying to fix build error ([4dc587a](https://github.com/figureland/mathkit/commit/4dc587a))
+- Fixed build entrypoints error ([02a7a8a](https://github.com/figureland/mathkit/commit/02a7a8a))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.19
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.18...v0.0.19)
