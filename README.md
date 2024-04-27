@@ -1,4 +1,9 @@
+![mathkit illustration](./docs/mathkit-hero.svg)
+
+**mathkit** is a minimal collection of tools for working with numbers, matrices, shapes and more.
+
 ## Scripts
+
 
 ### Install
 
