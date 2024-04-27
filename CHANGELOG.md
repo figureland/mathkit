@@ -1,4 +1,17 @@
 
+## v0.0.19
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.18...v0.0.19)
+
+### 📖 Documentation
+
+- Added illustration ([83914e9](https://github.com/figureland/mathkit/commit/83914e9))
+- Updated poster illustration ([ee5e7b8](https://github.com/figureland/mathkit/commit/ee5e7b8))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.18
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.17...v0.0.18)
