@@ -1,4 +1,16 @@
 
+## v0.0.21
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.20...v0.0.21)
+
+### 🚀 Enhancements
+
+- Tidied up entrypoints to reduce bundle size ([667d0f3](https://github.com/figureland/mathkit/commit/667d0f3))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.20
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.19...v0.0.20)
