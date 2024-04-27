@@ -10,9 +10,9 @@ import {
   acos,
   sin,
   cos
-} from './number'
+} from '@figureland/mathkit/number'
 
-import type { Matrix2D, Vector2 } from './api'
+import type { Matrix2D, Vector2 } from '@figureland/mathkit'
 
 export type { Vector2 } from './api'
 

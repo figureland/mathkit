@@ -4,7 +4,7 @@
     "module": "esnext",
     "strict": true,
     "esModuleInterop": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "skipLibCheck": true,
     "noUnusedLocals": true,
     "noImplicitAny": true,
@@ -13,7 +13,9 @@
     "outDir": "dist",
     "resolveJsonModule": true,
     "baseUrl": ".",
-    "allowImportingTsExtensions": true
-  },
-  "include": ["src"]
+    "paths": {
+      "@figureland/mathkit": ["./src/index.ts"],
+      "@figureland/mathkit/*": ["./src/*.ts"]
+    }
+  }
 }
