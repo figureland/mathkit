@@ -1,10 +1,11 @@
 import type { Box, Matrix2D, Vector2 } from './api'
-import matrix2D, {
+import {
+  matrix2D,
   translate as translateMat2D,
   rotate as rotateMat2D
 } from '@figureland/mathkit/matrix2D'
 import { max, min } from '@figureland/mathkit/number'
-import vector2, { isVector2, negate } from '@figureland/mathkit/vector2'
+import { vector2, isVector2, negate } from '@figureland/mathkit/vector2'
 
 export type { Box } from './api'
 
@@ -22,7 +23,7 @@ export const set = (
   return v
 }
 
-const box = (x: number = 0, y: number = 0, width: number = 0, height: number = 0): Box => ({
+export const box = (x: number = 0, y: number = 0, width: number = 0, height: number = 0): Box => ({
   x,
   y,
   width,
@@ -35,8 +36,6 @@ export const isBox = (v: any): v is Box =>
   typeof v.y === 'number' &&
   typeof v.width === 'number' &&
   typeof v.height === 'number'
-
-export default box
 
 /**
  * Creates a clone of the given box.

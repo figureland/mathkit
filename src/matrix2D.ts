@@ -3,7 +3,7 @@ import { EPS } from './constants'
 import { sin, cos, sqrt, abs, max, isNumber, lerp as _lerp } from '@figureland/mathkit'
 export type { Matrix2D } from './api'
 
-const matrix2D = (
+export const matrix2D = (
   a: number = 1,
   b: number = 0,
   c: number = 0,
@@ -11,8 +11,6 @@ const matrix2D = (
   e: number = 0,
   f: number = 0
 ): Matrix2D => [a, b, c, d, e, f]
-
-export default matrix2D
 
 export const clone = (m: Matrix2D) => matrix2D(m[0], m[1], m[2], m[3], m[4], m[5])
 

@@ -2,7 +2,8 @@ import { describe, test, expect } from 'bun:test'
 
 import { degreesToRad } from '../src'
 
-import box, {
+import {
+  box,
   intersects,
   includePoint,
   includeBox,
@@ -13,8 +14,8 @@ import box, {
   transformBox,
   boxCenter
 } from '../src/box'
-import matrix2D, { rotate, scale, translate } from '../src/matrix2D'
-import vector2, { negate } from '../src/vector2'
+import { matrix2D, rotate, scale, translate } from '../src/matrix2D'
+import { vector2, negate } from '../src/vector2'
 
 describe('Box Utilities', () => {
   test('clone should duplicate box', () => {

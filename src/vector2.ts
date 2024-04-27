@@ -24,12 +24,10 @@ export const set = (v: Vector2, x: number, y: number) => {
   return v
 }
 
-const vector2 = (x: number = 0, y: number = 0): Vector2 => ({ x, y })
+export const vector2 = (x: number = 0, y: number = 0): Vector2 => ({ x, y })
 
 export const isVector2 = (v: any): v is Vector2 =>
   !!v && 'x' in v && 'y' in v && !('width' in v || 'height' in v)
-
-export default vector2
 
 export const clone = (v: Vector2) => vector2(v.x, v.y)
 

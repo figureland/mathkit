@@ -1,5 +1,6 @@
 import { describe, test, expect } from 'bun:test'
-import vector2, {
+import {
+  vector2,
   add,
   subtract,
   multiply,

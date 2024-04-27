@@ -1,5 +1,6 @@
 import { describe, test, expect } from 'bun:test'
-import matrix2D, {
+import {
+  matrix2D,
   clone,
   identity,
   copy,
@@ -17,7 +18,7 @@ import matrix2D, {
   multiplyScalar,
   equals
 } from '../src/matrix2D'
-import vector2 from '../src/vector2'
+import { vector2 } from '../src/vector2'
 
 describe('Matrix2D operations', () => {
   test('create default Matrix2D', () => {
