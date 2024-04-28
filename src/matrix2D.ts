@@ -14,7 +14,7 @@ export const matrix2D = (
 
 export const clone = (m: Matrix2D) => matrix2D(m[0], m[1], m[2], m[3], m[4], m[5])
 
-const set = (m: Matrix2D, a: number, b: number, c: number, d: number, e: number, f: number) => {
+export const set = (m: Matrix2D, a: number, b: number, c: number, d: number, e: number, f: number) => {
   m[0] = a
   m[1] = b
   m[2] = c
