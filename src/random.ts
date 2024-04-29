@@ -1,6 +1,6 @@
 import { cos, floor, sin } from '@figureland/mathkit/number'
 import { vector2 } from '@figureland/mathkit/vector2'
-import { TAU } from '@figureland/mathkit'
+import { TAU } from '@figureland/mathkit/constants'
 import type { Box, Vector2 } from './api'
 
 type Random = () => number

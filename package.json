@@ -1,54 +1,59 @@
 {
   "name": "@figureland/mathkit",
   "version": "0.0.24",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.js"
+      "require": "./dist/src/index.js",
+      "import": "./dist/src/index.js"
     },
     "./number": {
       "types": "./dist/number.d.ts",
-      "require": "./dist/number.js",
-      "import": "./dist/number.js"
+      "require": "./dist/src/number.js",
+      "import": "./dist/src/number.js"
     },
     "./easing": {
       "types": "./dist/easing.d.ts",
-      "require": "./dist/easing.js",
-      "import": "./dist/easing.js"
+      "require": "./dist/src/easing.js",
+      "import": "./dist/src/easing.js"
     },
     "./vector2": {
       "types": "./dist/vector2.d.ts",
-      "require": "./dist/vector2.js",
-      "import": "./dist/vector2.js"
+      "require": "./dist/src/vector2.js",
+      "import": "./dist/src/vector2.js"
     },
     "./matrix2D": {
       "types": "./dist/matrix2D.d.ts",
-      "require": "./dist/matrix2D.js",
-      "import": "./dist/matrix2D.js"
+      "require": "./dist/src/matrix2D.js",
+      "import": "./dist/src/matrix2D.js"
     },
     "./box": {
       "types": "./dist/box.d.ts",
-      "require": "./dist/box.js",
-      "import": "./dist/box.js"
+      "require": "./dist/src/box.js",
+      "import": "./dist/src/box.js"
     },
     "./size": {
       "types": "./dist/size.d.ts",
-      "require": "./dist/size.js",
-      "import": "./dist/size.js"
+      "require": "./dist/src/size.js",
+      "import": "./dist/src/size.js"
     },
     "./random": {
       "types": "./dist/random.d.ts",
-      "require": "./dist/random.js",
-      "import": "./dist/random.js"
+      "require": "./dist/src/random.js",
+      "import": "./dist/src/random.js"
+    },
+    "./constants": {
+      "types": "./dist/constants.d.ts",
+      "require": "./dist/src/constants.js",
+      "import": "./dist/src/constants.js"
     },
     "./style": {
       "types": "./dist/style.d.ts",
-      "require": "./dist/style.js",
-      "import": "./dist/style.js"
+      "require": "./dist/src/style.js",
+      "import": "./dist/src/style.js"
     }
   },
   "description": "A minimal toolkit for working with numbers, matrices and vectors",

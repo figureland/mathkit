@@ -1,4 +1,4 @@
-import { PI } from './constants'
+import { PI } from '@figureland/mathkit/constants'
 
 export const { min, max, abs, sign, round, sqrt, sin, cos, ceil, floor, acos, tan, pow } = Math
 

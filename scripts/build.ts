@@ -3,14 +3,15 @@ import dts from 'bun-plugin-dts'
 await Bun.build({
   entrypoints: [
     './src/index.ts',
-    './src/style.ts',
+    './src/constants.ts',
+    './src/number.ts',
     './src/vector2.ts',
     './src/matrix2D.ts',
     './src/box.ts',
     './src/size.ts',
-    './src/number.ts',
-    './src/easing.ts',
-    './src/random.ts'
+    './src/style.ts',
+    './src/random.ts',
+    './src/easing.ts'
   ],
   outdir: './dist',
   minify: false,
