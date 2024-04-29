@@ -1,4 +1,17 @@
 
+## v0.0.24
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.23...v0.0.24)
+
+### 🚀 Enhancements
+
+- Removed array mutation ([480a6de](https://github.com/figureland/mathkit/commit/480a6de))
+- Renamed easing functions and removed duplicates from transfer ([e1b037c](https://github.com/figureland/mathkit/commit/e1b037c))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.23
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.22...v0.0.23)
