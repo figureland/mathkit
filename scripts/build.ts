@@ -9,7 +9,8 @@ await Bun.build({
     './src/box.ts',
     './src/size.ts',
     './src/number.ts',
-    './src/easing.ts'
+    './src/easing.ts',
+    './src/random.ts'
   ],
   outdir: './dist',
   minify: false,

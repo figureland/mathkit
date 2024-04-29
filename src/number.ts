@@ -47,7 +47,7 @@ export const mapRange = (
 export const lerp = (from: number, to: number, amount: number): number =>
   from * (1.0 - amount) + to * amount
 
-export const dp = (n: any, dp: number): number => Number(n.toFixed(dp))
+export const dp = (n: any, dp: number): number => parseFloat(n.toFixed(dp))
 
 export const isNumber = (n: any): n is number => typeof n === 'number'
 

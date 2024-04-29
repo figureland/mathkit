@@ -40,6 +40,11 @@
       "require": "./dist/size.js",
       "import": "./dist/size.js"
     },
+    "./random": {
+      "types": "./dist/random.d.ts",
+      "require": "./dist/random.js",
+      "import": "./dist/random.js"
+    },
     "./style": {
       "types": "./dist/style.d.ts",
       "require": "./dist/style.js",

@@ -23,6 +23,7 @@ export {
 } from './number'
 
 export {
+  EPS,
   PI,
   SQRT2,
   SQRT1_2,
