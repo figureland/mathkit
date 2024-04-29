@@ -1,4 +1,18 @@
 
+## v0.0.23
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.22...v0.0.23)
+
+### 🚀 Enhancements
+
+- Added constants ([73185df](https://github.com/figureland/mathkit/commit/73185df))
+- Added random entrypoint ([981285a](https://github.com/figureland/mathkit/commit/981285a))
+- Added geometry+randomess helpers ([54927ab](https://github.com/figureland/mathkit/commit/54927ab))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.22
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.21...v0.0.22)
