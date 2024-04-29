@@ -4,73 +4,69 @@ import { cos, pow, sin, sqrt } from '@figureland/mathkit/number'
 
 export type { Easing } from './api'
 
-export const linear: Easing = (x: number) => x
+export const linear: Easing = (x) => x
 
-export const easeInQuad: Easing = (x: number) => x * x
+export const quadIn: Easing = (x) => x * x
 
-export const easeOutQuad: Easing = (x: number) => 1 - (1 - x) * (1 - x)
+export const quadOut: Easing = (x) => 1 - (1 - x) * (1 - x)
 
-export const easeInOutQuad: Easing = (x: number) =>
-  x < 0.5 ? 2 * x * x : 1 - pow(-2 * x + 2, 2) / 2
+export const quadInOut: Easing = (x) => (x < 0.5 ? 2 * x * x : 1 - pow(-2 * x + 2, 2) / 2)
 
-export const easeInCubic: Easing = (x: number) => x * x * x
+export const cubicIn: Easing = (x) => x * x * x
 
-export const easeOutCubic: Easing = (x: number) => 1 - pow(1 - x, 3)
+export const cubicOut: Easing = (x) => 1 - pow(1 - x, 3)
 
-export const easeInOutCubic: Easing = (x: number) =>
-  x < 0.5 ? 4 * x * x * x : 1 - pow(-2 * x + 2, 3) / 2
+export const cubicInOut: Easing = (x) => (x < 0.5 ? 4 * x * x * x : 1 - pow(-2 * x + 2, 3) / 2)
 
-export const easeInQuart: Easing = (x: number) => x * x * x * x
+export const quartIn: Easing = (x) => x * x * x * x
 
-export const easeOutQuart: Easing = (x: number) => 1 - pow(1 - x, 4)
+export const quartOut: Easing = (x) => 1 - pow(1 - x, 4)
 
-export const easeInOutQuart: Easing = (x: number) =>
-  x < 0.5 ? 8 * x * x * x * x : 1 - pow(-2 * x + 2, 4) / 2
+export const quartInOut: Easing = (x) => (x < 0.5 ? 8 * x * x * x * x : 1 - pow(-2 * x + 2, 4) / 2)
 
-export const easeInQuint: Easing = (x: number) => x * x * x * x * x
+export const quintIn: Easing = (x) => x * x * x * x * x
 
-export const easeOutQuint: Easing = (x: number) => 1 - pow(1 - x, 5)
+export const quintOut: Easing = (x) => 1 - pow(1 - x, 5)
 
-export const easeInOutQuint: Easing = (x: number) =>
+export const quintInOut: Easing = (x) =>
   x < 0.5 ? 16 * x * x * x * x * x : 1 - pow(-2 * x + 2, 5) / 2
 
-export const easeInSine: Easing = (x: number) => 1 - cos((x * PI) / 2)
+export const sineIn: Easing = (x) => 1 - cos((x * PI) / 2)
 
-export const easeOutSine: Easing = (x: number) => sin((x * PI) / 2)
+export const sineOut: Easing = (x) => sin((x * PI) / 2)
 
-export const easeInOutSine: Easing = (x: number) => -(cos(PI * x) - 1) / 2
+export const sineInOut: Easing = (x) => -(cos(PI * x) - 1) / 2
 
-export const easeInExpo: Easing = (x: number) => (x === 0 ? 0 : pow(2, 10 * x - 10))
+export const expoIn: Easing = (x) => (x === 0 ? 0 : pow(2, 10 * x - 10))
 
-export const easeOutExpo: Easing = (x: number) => (x === 1 ? 1 : 1 - pow(2, -10 * x))
+export const expoOut: Easing = (x) => (x === 1 ? 1 : 1 - pow(2, -10 * x))
 
-export const easeInOutExpo: Easing = (x: number) =>
+export const expoInOut: Easing = (x) =>
   x === 0 ? 0 : x === 1 ? 1 : x < 0.5 ? pow(2, 20 * x - 10) / 2 : (2 - pow(2, -20 * x + 10)) / 2
 
-export const easeInCirc: Easing = (x: number) => 1 - sqrt(1 - pow(x, 2))
+export const circIn: Easing = (x) => 1 - sqrt(1 - pow(x, 2))
 
-export const easeOutCirc: Easing = (x: number) => sqrt(1 - pow(x - 1, 2))
+export const circOut: Easing = (x) => sqrt(1 - pow(x - 1, 2))
 
-export const easeInOutCirc: Easing = (x: number) =>
+export const circInOut: Easing = (x) =>
   x < 0.5 ? (1 - sqrt(1 - pow(2 * x, 2))) / 2 : (sqrt(1 - pow(-2 * x + 2, 2)) + 1) / 2
 
-export const easeInBack: Easing = (x: number) => 2.70158 * x * x * x - 1.70158 * x * x
+export const backIn: Easing = (x) => 2.70158 * x * x * x - 1.70158 * x * x
 
-export const easeOutBack: Easing = (x: number) =>
-  1 + 2.70158 * pow(x - 1, 3) + 1.70158 * pow(x - 1, 2)
+export const backOut: Easing = (x) => 1 + 2.70158 * pow(x - 1, 3) + 1.70158 * pow(x - 1, 2)
 
-export const easeInOutBack: Easing = (x: number) =>
+export const backInOut: Easing = (x) =>
   x < 0.5
     ? (pow(2 * x, 2) * ((2.5949095 + 1) * 2 * x - 2.5949095)) / 2
     : (pow(2 * x - 2, 2) * ((2.5949095 + 1) * (x * 2 - 2) + 2.5949095) + 2) / 2
 
-export const easeInElastic: Easing = (x: number) =>
+export const elasticIn: Easing = (x) =>
   x === 0 ? 0 : x === 1 ? 1 : -pow(2, 10 * x - 10) * sin(((x * 10 - 10.75) * (2 * PI)) / 3)
 
-export const easeOutElastic: Easing = (x: number) =>
+export const elasticOut: Easing = (x) =>
   x === 0 ? 0 : x === 1 ? 1 : pow(2, -10 * x) * sin(((x * 10 - 0.75) * (2 * PI)) / 3) + 1
 
-export const easeInOutElastic: Easing = (x: number) =>
+export const elasticInOut: Easing = (x) =>
   x === 0
     ? 0
     : x === 1
@@ -79,9 +75,7 @@ export const easeInOutElastic: Easing = (x: number) =>
         ? -(pow(2, 20 * x - 10) * sin(((20 * x - 11.125) * (2 * PI)) / 4.5)) / 2
         : (pow(2, -20 * x + 10) * sin(((20 * x - 11.125) * (2 * PI)) / 4.5)) / 2 + 1
 
-export const easeInBounce: Easing = (x: number) => 1 - easeOutBounce(1 - x)
-
-export const easeOutBounce: Easing = (x: number) => {
+export const bounceOut: Easing = (x) => {
   const n1 = 7.5625
   const d1 = 2.75
   if (x < 1 / d1) {
@@ -95,67 +89,21 @@ export const easeOutBounce: Easing = (x: number) => {
   }
 }
 
-export const easeInOutBounce: Easing = (x: number) =>
-  x < 0.5 ? (1 - easeOutBounce(1 - 2 * x)) / 2 : (1 + easeOutBounce(2 * x - 1)) / 2
+export const bounceIn: Easing = (x) => 1 - bounceOut(1 - x)
 
-export const easeInPoly =
-  (n: number): Easing =>
-  (x: number) =>
-    pow(x, n)
+export const bounceInOut: Easing = (x) =>
+  x < 0.5 ? (1 - bounceOut(1 - 2 * x)) / 2 : (1 + bounceOut(2 * x - 1)) / 2
 
-export const easeOutPoly =
-  (n: number): Easing =>
-  (x: number) =>
-    1 - pow(1 - x, n)
+export const polyIn: (v: number) => Easing = (n) => (x) => pow(x, n)
 
-export const easeInOutPoly =
-  (n: number): Easing =>
-  (x: number) =>
-    x < 0.5 ? pow(x * 2, n) / 2 : (2 - pow(2 * (1 - x), n)) / 2
+export const polyOut: (v: number) => Easing = (n) => (x) => 1 - pow(1 - x, n)
 
-export const easeInSin: Easing = (x: number) => 1 - cos((x * PI) / 2)
+export const polyInOut: (v: number) => Easing = (n) => (x) =>
+  x < 0.5 ? pow(x * 2, n) / 2 : (2 - pow(2 * (1 - x), n)) / 2
 
-export const easeOutSin: Easing = (x: number) => sin((x * PI) / 2)
+export const expIn: Easing = (x) => (x === 0 ? 0 : pow(2, 10 * x - 10))
 
-export const easeInOutSin: Easing = (x: number) => -(cos(PI * x) - 1) / 2
+export const expOut: Easing = (x) => (x === 1 ? 1 : 1 - pow(2, -10 * x))
 
-export const easeInExp: Easing = (x: number) => (x === 0 ? 0 : pow(2, 10 * x - 10))
-
-export const easeOutExp: Easing = (x: number) => (x === 1 ? 1 : 1 - pow(2, -10 * x))
-
-export const easeInOutExp: Easing = (x: number) =>
+export const expInOut: Easing = (x) =>
   x === 0 ? 0 : x === 1 ? 1 : x < 0.5 ? pow(2, 20 * x - 10) / 2 : (2 - pow(2, -20 * x + 10)) / 2
-
-export const easeInCirc2: Easing = (x: number) => 1 - sqrt(1 - x * x)
-
-export const easeOutCirc2: Easing = (x: number) => sqrt(1 - (1 - x) * (1 - x))
-
-export const easeInOutCirc2: Easing = (x: number) =>
-  x < 0.5 ? (1 - sqrt(1 - x * x)) / 2 : (sqrt(1 - (1 - x) * (1 - x)) + 1) / 2
-
-export const easeInBack2: Easing = (x: number) => 2.70158 * x * x * x - 1.70158 * x * x
-
-export const easeOutBack2: Easing = (x: number) =>
-  1 + 2.70158 * pow(x - 1, 3) + 1.70158 * pow(x - 1, 2)
-
-export const easeInOutBack2: Easing = (x: number) =>
-  x < 0.5
-    ? (pow(2 * x, 2) * ((2.5949095 + 1) * 2 * x - 2.5949095)) / 2
-    : (pow(2 * x - 2, 2) * ((2.5949095 + 1) * (x * 2 - 2) + 2.5949095) + 2) / 2
-
-export const easeInElastic2: Easing = (x: number) =>
-  x === 0 ? 0 : x === 1 ? 1 : -pow(2, 10 * x - 10) * sin(((x * 10 - 10.75) * (2 * PI)) / 3)
-
-export const easeOutElastic2: Easing = (x: number) =>
-  x === 0 ? 0 : x === 1 ? 1 : pow(2, -10 * x) * sin(((x * 10 - 0.75) * (2 * PI)) / 3) + 1
-
-export const easeInOutElastic2: Easing = (x: number) =>
-  x === 0
-    ? 0
-    : x === 1
-      ? 1
-      : x < 0.5
-        ? -(pow(2, 20 * x - 10) * sin(((20 * x - 11.125) * (2 * PI)) / 4.5)) / 2
-        : (pow(2, -20 * x + 10) * sin(((20 * x - 11.125) * (2 * PI)) / 4.5)) / 2 + 1
-
-export const easeInBounce2: Easing = (x: number) => 1 - easeOutBounce(1 - x)
