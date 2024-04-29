@@ -1,4 +1,16 @@
 
+## v0.0.25
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.24...v0.0.25)
+
+### 🚀 Enhancements
+
+- Organised entrypoints ([2ea8291](https://github.com/figureland/mathkit/commit/2ea8291))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.24
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.23...v0.0.24)
