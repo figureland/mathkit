@@ -1,4 +1,16 @@
 
+## v0.0.28
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.27...v0.0.28)
+
+### 🚀 Enhancements
+
+- Added tests for size and new fit method ([ac012fa](https://github.com/figureland/mathkit/commit/ac012fa))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.27
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.26...v0.0.27)
