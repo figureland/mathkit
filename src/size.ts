@@ -1,4 +1,5 @@
 import type { Size } from './api'
+import { min } from './number'
 
 export type { Size } from './api'
 
@@ -50,3 +51,21 @@ export const subtract = (s: Size, a: Size) => set(s, s.width - a.width, s.height
 export const multiply = (s: Size, a: Size) => set(s, s.width * a.width, s.height * a.height)
 
 export const divide = (s: Size, a: Size) => set(s, s.width / a.width, s.height / a.height)
+
+export const fit = (item: Size, container: Size): Size => {
+  const itemAspectRatio = item.width / item.height
+  const containerAspectRatio = container.width / container.height
+
+  let width: number
+  let height: number
+
+  if (itemAspectRatio > containerAspectRatio) {
+    width = min(item.width, container.width)
+    height = width / itemAspectRatio
+  } else {
+    height = min(item.height, container.height)
+    width = height * itemAspectRatio
+  }
+
+  return size(width, height)
+}
