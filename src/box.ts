@@ -113,7 +113,6 @@ export const intersects = (a: Box, b: Box | Vector2, padding: number = 0): boole
       a_padded.y < b.y + b.height &&
       a_padded.y + a_padded.height > b.y
     )
-    // Point intersection check
   } else if (isVector2(b)) {
     return (
       b.x >= a_padded.x &&
