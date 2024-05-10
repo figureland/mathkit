@@ -33,7 +33,7 @@ export const set = (
 }
 
 export const isMatrix2D = (m: any): m is Matrix2D =>
-  m != null && Array.isArray(m) && m.length === 6 && m.every(isNumber)
+  m != null && Array.isArray(m) && m.length === 6 && m.every((n) => isNumber(n) && !isNaN(n))
 
 export const identity = (m: Matrix2D) => set(m, 1, 0, 0, 1, 0, 0)
 
