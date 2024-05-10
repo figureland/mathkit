@@ -1,4 +1,20 @@
 
+## v0.0.29
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.28...v0.0.29)
+
+### 🩹 Fixes
+
+- Updating bug in matrix2D guard ([1986519](https://github.com/figureland/mathkit/commit/1986519))
+
+### 🏡 Chore
+
+- Removed comment ([c3ee00e](https://github.com/figureland/mathkit/commit/c3ee00e))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.28
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.27...v0.0.28)
