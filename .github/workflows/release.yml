@@ -5,9 +5,7 @@ on:
     tags:
       - 'v*'
 
-permissions:
-  id-token: write
-  contents: write
+permissions: write-all
       
 jobs:
   release:
