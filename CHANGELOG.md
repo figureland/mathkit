@@ -1,4 +1,16 @@
 
+## v0.0.35
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.34...v0.0.35)
+
+### 🏡 Chore
+
+- Updating action permissions ([7ab913c](https://github.com/figureland/mathkit/commit/7ab913c))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.34
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.33...v0.0.34)
