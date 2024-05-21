@@ -1,4 +1,16 @@
 
+## v0.0.33
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.32...v0.0.33)
+
+### 🏡 Chore
+
+- Added badges ([ac9dc2b](https://github.com/figureland/mathkit/commit/ac9dc2b))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.32
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.30...v0.0.32)
