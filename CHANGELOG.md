@@ -1,4 +1,17 @@
 
+## v0.0.32
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.30...v0.0.32)
+
+### 🏡 Chore
+
+- Added provenance to github publish ([2ddf7d3](https://github.com/figureland/mathkit/commit/2ddf7d3))
+- Fixing after release error ([65dc6b3](https://github.com/figureland/mathkit/commit/65dc6b3))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.31
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.30...v0.0.31)
