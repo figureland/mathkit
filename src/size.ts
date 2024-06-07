@@ -1,5 +1,5 @@
 import type { Size } from './api'
-import { min } from './number'
+import { dp, min } from './number'
 
 export type { Size } from './api'
 
@@ -69,3 +69,5 @@ export const fit = (item: Size, container: Size): Size => {
 
   return size(width, height)
 }
+
+export const preciseEnough = (s: Size) => set(s, dp(s.width), dp(s.height))

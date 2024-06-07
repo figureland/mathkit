@@ -4,7 +4,7 @@ import {
   translate as translateMat2D,
   rotate as rotateMat2D
 } from '@figureland/mathkit/matrix2D'
-import { max, min } from '@figureland/mathkit/number'
+import { dp, max, min } from '@figureland/mathkit/number'
 import { vector2, isVector2, negate } from '@figureland/mathkit/vector2'
 
 export type { Box } from './api'
@@ -196,3 +196,5 @@ export const rotate = (box: Box, angle: number) => {
 }
 
 export const boxCenter = (box: Box) => vector2(box.x + box.width / 2, box.y + box.height / 2)
+
+export const preciseEnough = (b: Box) => set(b, dp(b.x), dp(b.y), dp(b.width), dp(b.height))
