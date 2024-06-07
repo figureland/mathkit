@@ -1,4 +1,21 @@
 
+## v0.0.36
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.35...v0.0.36)
+
+### 🚀 Enhancements
+
+- Added preciseEnough methods for Matrix2D and Vector2 ([b8c9772](https://github.com/figureland/mathkit/commit/b8c9772))
+- Added precise enough for Size and Box ([3764069](https://github.com/figureland/mathkit/commit/3764069))
+
+### 🏡 Chore
+
+- Update action version ([ae6290b](https://github.com/figureland/mathkit/commit/ae6290b))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.35
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.34...v0.0.35)
