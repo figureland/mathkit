@@ -93,7 +93,7 @@ export const dot = (a: Vector2, b: Vector2) => a.x * b.x + a.y * b.y
 export const lerp = (v: Vector2, a: Vector2, b: Vector2, amount: number) =>
   set(v, _lerp(a.x, b.x, amount), _lerp(a.y, b.y, amount))
 
-export const transformMatrix2D = (v: Vector2, a: Vector2, m: Matrix2D) =>
+export const transform = (v: Vector2, a: Vector2, m: Matrix2D) =>
   set(v, m[0] * a.x + m[2] * a.y + m[4], m[1] * a.x + m[3] * a.y + m[5])
 
 export const rotate = (v: Vector2, a: Vector2, b: Vector2, rad: number) => {
