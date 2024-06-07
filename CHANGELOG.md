@@ -1,4 +1,20 @@
 
+## v0.0.37
+
+[compare changes](https://github.com/figureland/mathkit/compare/v0.0.36...v0.0.37)
+
+### 🚀 Enhancements
+
+- Renamed transformMatrix2D ([1254e14](https://github.com/figureland/mathkit/commit/1254e14))
+
+### ✅ Tests
+
+- Updated shuffle test ([b0e3091](https://github.com/figureland/mathkit/commit/b0e3091))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.36
 
 [compare changes](https://github.com/figureland/mathkit/compare/v0.0.35...v0.0.36)
