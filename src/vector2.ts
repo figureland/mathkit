@@ -9,7 +9,8 @@ import {
   abs,
   acos,
   sin,
-  cos
+  cos,
+  dp
 } from '@figureland/mathkit/number'
 
 import type { Matrix2D, Vector2 } from '@figureland/mathkit'
@@ -114,3 +115,5 @@ export const exactEquals = (a: Vector2, b: Vector2) => a.x === b.x && a.y === b.
 export const equals = (a: Vector2, b: Vector2) =>
   abs(a.x - b.x) <= EPS * _max(1.0, abs(a.x), abs(b.x)) &&
   abs(a.y - b.y) <= EPS * _max(1.0, abs(a.y), abs(b.y))
+
+export const preciseEnough = (v: Vector2) => set(v, dp(v.x), dp(v.y))

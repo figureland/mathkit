@@ -1,6 +1,6 @@
 import type { Matrix2D, Vector2 } from '@figureland/mathkit'
 import { EPS } from '@figureland/mathkit/constants'
-import { sin, cos, sqrt, abs, max, isNumber, lerp as _lerp } from '@figureland/mathkit/number'
+import { sin, cos, sqrt, abs, max, isNumber, lerp as _lerp, dp } from '@figureland/mathkit/number'
 export type { Matrix2D } from './api'
 
 export const matrix2D = (
@@ -142,3 +142,6 @@ export const lerp = (m: Matrix2D, a: Matrix2D, b: Matrix2D, t: number) =>
     _lerp(a[4], b[4], t),
     _lerp(a[5], b[5], t)
   )
+
+export const preciseEnough = (m: Matrix2D) =>
+  set(m, dp(m[0]), dp(m[1]), dp(m[2]), dp(m[3]), dp(m[4]), dp(m[5]))

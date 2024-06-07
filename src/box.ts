@@ -139,7 +139,7 @@ export const intersection = (a: Box, b: Box) => {
 
 export const calculateBoundingBox = (boxes: Box[]): Box => {
   if (boxes.length === 0) {
-    return { x: 0, y: 0, width: 0, height: 0 }
+    return box()
   }
 
   let minX = Infinity
