@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This codebase is deprecated, and has been moved to [@figureland/kit](https://github.com/figureland/kit/).
+
 ![mathkit illustration](./docs/mathkit-hero.svg)
 
 [![CI](https://github.com/figureland/mathkit/actions/workflows/ci.yml/badge.svg)](https://github.com/figureland/mathkit/actions/workflows/ci.yml)
